@@ -33,7 +33,7 @@ const Login = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--bg-color)' }}>
       <div className="glass-card" style={{ width: '100%', maxWidth: '400px', padding: '2.5rem' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--primary-color)', fontSize: '2rem', fontWeight: '800' }}>GeniBlog</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--primary-color)', fontSize: '2rem', fontWeight: '800' }}>UyiBlog</h2>
         <h3 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Sign in to your account</h3>
         
         {error && (

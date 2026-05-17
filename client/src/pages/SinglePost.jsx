@@ -55,7 +55,7 @@ const SinglePost = () => {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Mini Header */}
       <header style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', backgroundColor: 'var(--card-bg)' }}>
-        <Link to="/" style={{ color: 'var(--primary-color)', fontSize: '1.5rem', fontWeight: '800', textDecoration: 'none' }}>GeniBlog</Link>
+        <Link to="/" style={{ color: 'var(--primary-color)', fontSize: '1.5rem', fontWeight: '800', textDecoration: 'none' }}>UyiBlog</Link>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-color)' }}>
           <FiArrowLeft /> Back
         </Link>

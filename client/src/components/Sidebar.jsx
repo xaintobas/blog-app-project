@@ -1,15 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
 import { FiHome, FiFileText, FiPlusSquare, FiGrid, FiTag, FiUsers, FiMoon, FiSun } from 'react-icons/fi';
 
 const Sidebar = () => {
   const { theme, toggleTheme } = useTheme();
+  const { user } = useAuth();
 
   return (
     <div className="sidebar">
       <div className="sidebar-logo">
-        <FiGrid /> GeniBlog
+        <FiGrid /> UyiBlog
       </div>
       
       <div className="sidebar-nav">
@@ -28,9 +30,11 @@ const Sidebar = () => {
         <NavLink to="/dashboard/tags" className={({isActive}) => isActive ? 'nav-item active' : 'nav-item'}>
           <FiTag /> Tags
         </NavLink>
-        <NavLink to="/dashboard/users" className={({isActive}) => isActive ? 'nav-item active' : 'nav-item'}>
-          <FiUsers /> All Users
-        </NavLink>
+        {user?.role === 'Admin' && (
+          <NavLink to="/dashboard/users" className={({isActive}) => isActive ? 'nav-item active' : 'nav-item'}>
+            <FiUsers /> All Users
+          </NavLink>
+        )}
       </div>
 
       <div className="theme-toggle" onClick={toggleTheme}>

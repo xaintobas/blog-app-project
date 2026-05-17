@@ -8,7 +8,7 @@ const Footer = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '2rem' }}>
         
         <div style={{ flex: '1 1 300px' }}>
-          <h2 style={{ color: 'var(--primary-color)', fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '800' }}>GeniBlog</h2>
+          <h2 style={{ color: 'var(--primary-color)', fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '800' }}>UyiBlog</h2>
           <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>
             A modern, full-stack blogging platform. Built with React, Node.js, Express, and MongoDB.
             Discover brilliant ideas and insights from our top authors.

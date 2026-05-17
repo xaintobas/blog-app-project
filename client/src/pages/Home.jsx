@@ -28,8 +28,8 @@ const Home = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <header style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', backgroundColor: 'var(--card-bg)' }}>
-        <h1 style={{ color: 'var(--primary-color)', fontSize: '1.8rem', margin: 0 }}>GeniBlog</h1>
+      <header className="home-header" style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', backgroundColor: 'var(--card-bg)' }}>
+        <h1 style={{ color: 'var(--primary-color)', fontSize: '1.8rem', margin: 0 }}>UyiBlog</h1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <div className="theme-toggle" onClick={toggleTheme} style={{ margin: 0, padding: '0.5rem' }}>
             {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
@@ -53,7 +53,7 @@ const Home = () => {
         ) : posts.length === 0 ? (
           <div style={{ textAlign: 'center', color: 'var(--text-muted)' }}>No posts published yet. Check back soon!</div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+          <div className="blog-grid">
             {posts.map(post => (
               <div key={post._id} className="glass-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div style={{ 
