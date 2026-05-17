@@ -15,7 +15,7 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await api.get(`/posts/${slug}`);
+        const res = await api.get(`/posts/slug/${slug}`);
         setPost(res.data.data);
       } catch (err) {
         setError('Failed to fetch post. It might have been removed or does not exist.');

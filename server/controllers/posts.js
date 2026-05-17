@@ -5,7 +5,7 @@ const Post = require('../models/Post');
 // @access  Public
 exports.getPosts = async (req, res, next) => {
   try {
-    const posts = await Post.find().populate('category').populate('tags').populate('author', 'username email profilePicture');
+    const posts = await Post.find().sort('-createdAt').populate('category').populate('tags').populate('author', 'username email profilePicture');
     res.status(200).json({ success: true, count: posts.length, data: posts });
   } catch (err) {
     res.status(400).json({ success: false, error: err.message });
