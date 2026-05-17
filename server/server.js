@@ -15,6 +15,9 @@ connectDB();
 
 const app = express();
 
+// Trust proxy for Render load balancers so secure cookies work
+app.set('trust proxy', 1);
+
 // Body parser
 app.use(express.json());
 
